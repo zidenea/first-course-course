@@ -1,0 +1,16 @@
+title: first course
+description: this course is saved of my first github use
+template:
+  repo: first-course-template
+  name: first-course
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
